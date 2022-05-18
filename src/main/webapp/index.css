@@ -1,0 +1,1725 @@
+@import url(https://fonts.google.com/specimen/Syne+Mono);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+input[type="submit"] {
+  background-color: rgb(128, 255, 0);
+  border: none;
+  color: rgb(23, 22, 22);
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 15px;
+  width: 50%;
+}
+
+input[type="submit"]:hover{
+color: rgb(23,22,22);
+  background: azure;
+	
+}
+
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgb(35 35 85);
+}
+
+span {
+  font-size: 0.9rem;
+  color: #757373;
+}
+
+h6 {
+  font-size: 1.1rem;
+  color: rgb(24, 24, 49);
+}
+
+/* navigation bar  */
+nav {
+  position: fixed;
+  width: 100%;
+  background-color: azure;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1vw 2vw 1vw 2vw;
+  align-items: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  /*  this is beacuse our course photo overlap nav bar */
+}
+
+nav img {
+  width: 100px;
+
+  cursor: pointer;
+}
+
+/* nav .navigationBar {
+  this is for hamburger icon 
+  display: flex;
+} */
+
+/* styling hamburger icon */
+#menu-btn {
+  width: 30px;
+  height: 30px;
+  display: none;
+  /* this to hide menu icon like in desktop mode */
+}
+
+#menu-close {
+  display: none;
+  /* for hide display none in desktop mode */
+}
+
+/* home about us...in single row */
+nav .navigationBar ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+/* remove bullets that form due to list */
+nav .navigationBar ul li {
+  list-style: none;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+/* changing style of home.....and remove underline  */
+nav .navigationBar ul li a {
+  text-decoration: none;
+  color: rgb(21, 21, 100);
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+/* making home about us...hover */
+/* this extra line for in which we are that button remian highlighted*/
+nav .navigationBar ul li a:active,
+nav .navigationBar ul li a.active,
+nav .navigationBar ul li a:hover {
+  color: #fdc938;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: rgb(21, 26, 67);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+nav .navigationBar .dropdown:hover .dropbtn {
+  background-color: rgb(241, 230, 230);
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Home */
+#home {
+  background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)),
+    url("images/home4.jpg");
+    transition: background-image 3s;
+      background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 10%;
+}
+
+/* setting home heading enhance... */
+#home h2 {
+  color: azure;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+/* setting paragraph like para in mid,height etc  */
+#home p {
+  width: 70%;
+  color: azure;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  line-height: 25px;
+}
+
+/* giving margin to button so that they cannot intersect with above contemt */
+#home .btn {
+  margin-top: 30px;
+}
+
+/* styling button leran more... */
+#home a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 13px 35px;
+  background-color: azure;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+/* leran more button */
+#home a.blue {
+  color: azure;
+  background: rgb(21, 21, 100);
+  transition: 0.3s ease;
+}
+
+#home a.blue:hover {
+  color: rgb(21, 21, 100);
+  background: azure;
+}
+/* visit Courses button */
+#home a.yellow {
+  color: rgb(21, 21, 100);
+  background: yellow;
+  transition: 0.3s ease;
+}
+
+#home a.yellow:hover {
+  color: rgb(21, 21, 100);
+  background: azure;
+}
+
+/* login page  */
+#login {
+  background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)),
+    url("images/back.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  text-align: center;
+  padding-top: 9%;
+  padding-bottom: 3%;
+}
+
+#login .title-para {
+  justify-content: center;
+  width: 50%;
+
+  padding: 13% 10% 10% 10%;
+}
+
+#login .form h3 {
+  color: rgb(255,255,255);
+  font-weight: bold;
+}
+
+#login .title-para h2 {
+  color: rgb(194, 239, 109);
+}
+
+#login .title-para p {
+  padding-top: 30px;
+  color: white;
+}
+
+#login .form form {
+	
+  width: 400px;
+  opacity:60%;
+   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  margin: 60px 0 0 -40px;
+  padding: 30px;
+  box-shadow: 0px 8px 32px 0, rgba(31, 38, 135, 0.37);
+}
+
+/* now styling form input section */
+#login .form form input {
+	background-color:black;
+	color:white;
+  margin: 20px 0;
+  padding: 15px 10px;
+  border: 1px solid rgb(150, 134, 192);
+  outline: none;
+  border-radius: 20px;
+}
+
+#login .form form input::placeholder {
+  color: white;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+
+/*#login .form .btn input {
+	width:50%;
+  margin-top: 20px;
+  text-align: center;
+  text-color:rgb(255,255,255);
+  background-color:yellow;
+  border-radius:15px;
+  font-weight:500;
+  font-size:0.9rem;
+  padding:15px 20px 15px 20px;
+}
+
+#login form .btn .yellow {
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding-top: 10px;
+  padding: 13px 35px;
+  background-color: azure;
+  font-weight: 600;
+  border-radius: 5px;
+  color: rgb(21, 21, 100);
+  background: yellow;
+  transition: 0.3s ease;
+}
+
+#login .form .btn input .yellow:hover {
+  color: rgb(21, 21, 100);
+  background: azure;
+}*/
+
+#login .form a {
+	color:white;
+  margin-top: 65%;
+  padding-top: 14px;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+  text-shadow: #0b0b0b;
+  text-align: center;
+  
+}
+
+/*#login .form a {
+	color:white;
+  padding-top: 10px;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+  text-shadow: #0b0b0b;
+  text-align: center;
+}*/
+
+#login .btn input[type="submit"] {
+  background-color: black;
+  border: none;
+  color: rgb(255,255,255);
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 15px;
+  width: 50%;
+}
+
+#login .btn input[type="submit"]:hover{
+background-color: white;
+color:black;
+  background: azure;
+	
+}
+
+
+/* fetaures section */
+
+#features {
+  padding: 5vw 8vw 0 8vw; /*padding from above section*/
+  text-align: center;
+}
+
+/* making all three scholarship... in a row  for that we can use flex or grid*/
+
+#features .fea-base {
+  display: flex;
+  /* padding-top: px; */
+
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  /* space between grid */
+  grid-gap: 1rem;
+  margin-top: 50px;
+}
+
+#features .fea-box {
+  padding: 1vw 1vw 1vw 1vw;
+  background: rgb(212, 221, 247);
+  text-align: start;
+}
+
+#features .fea-box i {
+  padding: 1vw 1vw 1vw 1vw;
+  font-size: 2.3rem;
+  color: rgb(21, 21, 100);
+}
+
+#features .fea-box h3 {
+  padding: 1vw 1vw 1vw 1vw;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(46, 46, 59);
+  padding: 13px 0 7px 0;
+}
+
+#features .fea-box p {
+  padding: 1vw 1vw 1vw 1vw;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(46, 46, 59);
+  padding: 13px 0 7px 0;
+}
+
+/* our popular courses */
+#course {
+  padding: 8vw 8vw 8vw 8vw;
+  text-align: center;
+}
+
+/* making al courses ingrdi */
+#course .course-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  /* space between grid */
+  grid-gap: 1rem;
+  margin-top: 50px;
+}
+
+#course .courses {
+  text-align: start;
+  background-attachment: white;
+  height: 100%;
+  position: relative;
+}
+
+#course .courses img {
+  width: 100%;
+  height: 60%;
+  background-size: cover;
+  background-position: centre;
+}
+
+#course .courses .details {
+  padding: 15px 15px 0px 15px;
+}
+
+#course .courses .details {
+  color: #fdc938;
+  font-size: 0.9rem;
+}
+
+#course .courses .cost {
+  /* we are styling cost in circle and in image */
+  background-color: rgb(150, 134, 192);
+  color: white;
+  line-height: 70px;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  right: 15px;
+  /* and now goto #cousre .courses and put position relative */
+  bottom: 100px;
+}
+
+/* registration */
+#registration {
+  padding: 6vw 8vw 6vw 8vw;
+  background-image: linear-gradient(
+      rgb(99, 112, 168, 0.5),
+      rgba(81, 91, 233, 0.5)
+    ),
+    url("images/signup.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#registration .reminder {
+  color: white;
+}
+
+#registration .reminder h1 {
+  color: white;
+}
+
+#registration .reminder .time {
+  display: flex;
+  margin-top: 40px;
+}
+
+#registration .reminder .time .date {
+  text-align: center;
+  padding: 6px;
+  padding-inline-end: 36px 33px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  box-shadow: 0px 8px 32px 0, rgba(31, 38, 135, 0.37);
+  margin: 10px 5px 10px 5px;
+  border: 1px solid;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+/* form section */
+#registration .form {
+  background: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  box-shadow: 0px 8px 32px 0, rgba(31, 38, 135, 0.37);
+}
+
+/* now styling form input section */
+/* #registration .form input {
+  margin: 10px 0;
+  padding: 15px 10px;
+  border: 1px solid rgb(150, 134, 192);
+  outline: none;
+}
+
+#registration .form input::placeholder {
+  color: #413c3c;
+  font-weight: 500;
+  font-size: 0.9rem;
+} */
+
+#registration .form .btn {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#registration .btn a.yellow {
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding-top: 10px;
+  padding: 13px 35px;
+  background-color: azure;
+  font-weight: 600;
+  border-radius: 5px;
+  color: rgb(21, 21, 100);
+  background: yellow;
+  transition: 0.3s ease;
+}
+
+#registration .btn a.yellow:hover {
+  color: rgb(21, 21, 100);
+  background: azure;
+}
+
+/* #registration .form .forget {
+  margin-top: 25px;
+  align-items: center;
+  /* text-decoration: none; 
+  list-style: none;
+  text-shadow: #0b0b0b;
+  text-align: center;
+} */
+
+/* experts section */
+
+#experts {
+  padding: 8vw 8vw 8vw 8vw;
+  text-align: center;
+}
+
+#experts .expert-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* space between grid */
+  grid-gap: 1rem;
+  margin-top: 50px;
+}
+
+#experts .expert-box .profile {
+  background: white;
+  padding: 10px 5px;
+}
+
+.pro-links {
+  margin-top: 10px;
+}
+
+.pro-links {
+  padding: 10px 13px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.pro-links i {
+  padding: 10px 13px;
+  border: 1px solid rgb(21, 21, 100);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.pro-links i:hover {
+  background: rgb(21, 21, 100);
+  color: azure;
+  border: 1px solid rgb(21, 21, 100);
+  cursor: pointer;
+}
+
+
+ 
+
+
+/* //footer section  */
+
+footer {
+  padding: 8vw;
+  background-color: rgb(7, 7, 44);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  /* color: aliceblue; */
+}
+footer .footer-col {
+  padding-bottom: 40px;
+}
+footer .footer-col {
+  color: rgb(212, 221, 247);
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
+footer h3 {
+  color: rgb(212, 221, 247);
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+footer li {
+  list-style: none;
+  color: grey;
+  padding: 10px 0;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+footer li:hover {
+  color: rgb(212, 221, 247);
+}
+/* newsletter side */
+footer p {
+  color: #757373;
+  margin-bottom: 10px;
+}
+
+footer.subscribe {
+  margin-top: 20px;
+}
+
+footer input {
+  width: 220px;
+  padding: 10px 10px;
+  background: #333331;
+  border-radius: 0.5cm;
+  outline: none;
+  color: aliceblue;
+}
+
+footer .subscribe a {
+  text-decoration: none;
+  margin-left: 5px;
+  font-size: 0.9rem;
+  padding: 10px 15px;
+  background-color: azure;
+  font-weight: 600;
+  border-radius: 15px;
+}
+
+footer .subscribe a.yellow {
+  color: rgb(21, 21, 100);
+  background: yellow;
+  transition: 0.3s ease;
+}
+
+footer .subscribe a.yellow:hover {
+  color: rgb(21, 21, 100);
+  background: azure;
+}
+
+/* copyright */
+footer .copyright {
+  margin-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: centre;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+footer .copyright p {
+  margin-top: 16px;
+  color: aliceblue;
+}
+
+footer .copyright .pro-links {
+  margin-top: 0px;
+  border: none;
+}
+
+footer .copyright .pro-links i {
+  background-color: #757373;
+  color: aliceblue;
+}
+
+footer .copyright .pro-links i:hover {
+  background: rgb(221, 224, 50);
+  color: #413c3c;
+}
+
+/* about-home */
+#about-home {
+  background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)),
+    url("images/back1.jpg");
+  width: 100%;
+  height: 60vh;
+
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 10%;
+}
+
+#about-home h2 {
+  color: aliceblue;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+/* about's second section */
+#about-container {
+  display: flex;
+  align-items: center;
+  padding: 8vw 8vw 2vw 8vw;
+}
+
+#about-container .about-img {
+  width: 60%;
+  padding-right: 60px;
+}
+#about-container .about-img img {
+  width: 100%;
+}
+
+#about-container .about-text {
+  width: 40%;
+  padding: 60px;
+}
+
+#about-container .about-text h2 {
+  color: #0b0b0b;
+  padding-bottom: 15px;
+}
+
+#about-container .about-text p {
+  color: #57476d;
+  font-weight: 300;
+}
+
+#about-container .about-text .about-fe {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+#about-container .about-text .about-fe img {
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+  margin-right: 20px;
+}
+
+#about-container .about-text .about-fe .fe-text {
+  width: 90%;
+}
+
+#about-container .about-text .about-fe .fe-text h5 {
+  font-size: 16px;
+  color: #0b0b0b;
+}
+
+/* trusted section */
+#trust {
+  text-align: center;
+  padding: 8vw;
+}
+
+#trust .trust-img {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#trust .trust-img img {
+  width: 90px;
+  height: auto;
+}
+
+/* Blog Page */
+
+#blog-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 8vw;
+}
+
+#blog-container .blogs {
+  width: 60%;
+}
+
+#blog-container .blogs img {
+  width: 100%;
+  border-radius: 19px;
+}
+
+#blog-container .blogs .post {
+  padding-bottom: 30px;
+}
+
+#blog-container .blogs .post h3 {
+  color: #293030;
+  padding: 15px 0 10px 0;
+}
+
+#blog-container .blogs .post p {
+  color: #757573;
+  padding-bottom: 20px;
+}
+
+#blog-container .blogs .post a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 13px 35px;
+  background-color: rgb(21, 21, 100);
+  color: aliceblue;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+#blog-container .cate {
+  width: 30%;
+}
+
+#blog-container .cate h2 {
+  padding-bottom: 7px;
+}
+
+#blog-container .cate a {
+  text-decoration: none;
+  color: #757573;
+  font-weight: 500;
+  line-height: 45px;
+}
+/* blog post part */
+
+#blog-container .blogs_post {
+  width: 60%;
+  margin: 0 auto;
+}
+
+#blog-container .blogs_post p {
+  text-align: justify;
+  padding-bottom: 60px !important; /*!important we use to overide style*/
+}
+
+/* course inner */
+#course-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 8vw;
+}
+
+#course-inner h3 {
+  padding: 35px 0 25px 0;
+  color: #293030;
+}
+
+#course-inner p {
+  color: #413c3c;
+}
+
+#course-inner hr {
+  height: 1px;
+  background: rgba(236, 226, 229, 0.5);
+  margin-top: 40px;
+}
+
+#course-inner .overview {
+  width: 70%;
+}
+
+#course-inner .overview .course-image {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+#course-inner .overview .course-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+#course-inner .overview .course-head .c-name {
+  width: 70%;
+}
+#course-inner .overview .course-head .c-name h2 {
+  color: #293030;
+}
+
+#course-inner .overview .course-head .c-name .star {
+  margin: 6px 0;
+}
+
+#course-inner .overview .course-head .c-name .star i {
+  color: #fdc938;
+  font-size: 0.9rem;
+}
+
+#course-inner .overview .course-head span {
+  padding: 13px 13px;
+  border-radius: 5px;
+  color: whitesmoke;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #57476d;
+}
+
+#course-inner .overview .course-head .c-name p {
+  font-size: 15px;
+}
+
+#course-inner .learn p {
+  font-size: 15px;
+  padding-bottom: 15px;
+}
+
+#course-inner .learn p i {
+  color: #654ce4;
+  font-weight: 700;
+  margin-right: 20px;
+}
+
+#course-inner .tutor {
+  display: flex;
+}
+#course-inner .tutor img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+#course-inner .tutor h5 {
+  font-size: 15px;
+}
+
+#course-inner .enroll {
+  width: 300px;
+  padding: 0 30px 30px 30px;
+  border-radius: 11px;
+  box-shadow: 0px 20px 40px 0 rgb(212, 221, 247);
+}
+
+#course-inner .enroll h3 {
+  padding-bottom: 10px;
+}
+
+#course-inner .enroll p {
+  font-size: 15px;
+  color: #57476d;
+  margin: 15px 0;
+}
+
+#course-inner .enroll p i {
+  color: #57476d;
+  /* font-weight: 500; */
+  margin-right: 18px;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+}
+
+#course-inner .enroll .enroll-btn {
+  padding: 25px 0 20px 0;
+  margin: auto;
+  text-align: center;
+}
+
+#course-inner .enroll .enroll-btn a {
+  text-decoration: none;
+  padding: 13px 45px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  font-weight: 600;
+  color: aliceblue;
+  background: #57476d;
+}
+/* ---------------------------- */
+/*enroll detail*/
+
+#enroll-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 8vw;
+}
+
+#enroll-page h3 {
+  padding: 35px 0 25px 0;
+  color: #293030;
+}
+
+#enroll-page p {
+  color: #413c3c;
+}
+
+#enroll-page hr {
+  /* width: 30%; */
+  height: 1px;
+  background: rgba(236, 226, 229, 0.5);
+  margin-top: 40px;
+}
+
+#enroll-page .overview {
+  width: 50%;
+}
+
+#enroll-page .overview .course-image {
+  width: 70%;
+  height: 60vh;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  margin-right: 0%;
+}
+
+#enroll-page .overview .course-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-right: 30%;
+}
+
+#enroll-page .overview .course-head .c-name {
+  width: 50%;
+  font-size: 12px;
+}
+#enroll-page .overview .course-head .c-name h2 {
+  color: #293030;
+}
+
+#enroll-page .overview .course-head .c-name .star {
+  margin: 6px 0;
+}
+
+#enroll-page .overview .course-head .c-name .star i {
+  color: #fdc938;
+  font-size: 0.9rem;
+}
+/* enroll button */
+#enroll-page .overview .course-head span {
+  padding: 13px 13px;
+  border-radius: 5px;
+  color: whitesmoke;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #2d234e;
+}
+
+#enroll-page .overview .course-head .c-name p {
+  font-size: 15px;
+  text-align: justify;
+}
+
+/* enroll detail form styling */
+#enroll-page .enroll-detail {
+  margin-top: 0%;
+  width: 50%;
+  background: white;
+  border-radius: 8px;
+  
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  box-shadow: 3px 8px 32px 3px, rgba(31, 38, 135, 0.37);
+}
+
+#enroll-page .enroll-detail img{
+  width: 100%;
+  height: 9rem;
+  /* object-fit: cover; */
+  border-radius: 12px;
+  margin-bottom: 20px;
+  margin-right: 0%;
+}
+
+#enroll-page .enroll-detail input {
+  width:100%;
+  margin: 10px 10px;
+  
+  padding: 10px;
+  border: 1px solid rgb(150, 134, 192);
+  border-radius:10px;
+  outline: none;
+}
+
+#enroll-page .enroll-detail input::placeholder {
+  color: #413c3c;
+  font-weight: 500;
+  font-size: 0.9rem;
+  
+}
+
+#enroll-page .enroll-detail .btn {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#enroll-page .btn a.yellow {
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding-top: 10px;
+  padding: 13px 35px;
+  background-color: azure;
+  font-weight: 600;
+  border-radius: 5px;
+  color: rgb(21, 21, 100);
+  background: yellow;
+  transition: 0.3s ease;
+}
+
+#enroll-page .btn a.yellow:hover {
+  color: rgb(21, 21, 100);
+  background: azure;
+}
+/* ----------------------------------------------------- */
+
+/*enroll table  */
+
+#enroll-table{
+	
+	width:100%;
+	padding:20px;
+	
+}
+
+#enroll-table .customers {
+ 
+  border-collapse: collapse;
+  width: 100%;
+  
+}
+
+#enroll-table .customers td
+{
+  border: 2px solid black;
+  margin:10px;
+  padding: 8px;
+  
+}
+
+#enroll-table .customers tr:nth-child(even)
+{
+background-color: #f2f2f2;
+padding:20px;
+margin:20px;
+
+}
+
+#enroll-table .customers tr:hover 
+{
+background-color:#bdcbf2;
+padding:20px;
+margin:20px;
+
+}
+
+#enroll-table .customers th 
+{
+	border: 2px solid black;
+  padding:12px;
+  text-align: left;
+  background-color:#1b284d;
+  color: white;
+}
+
+
+
+
+/* enroll print  */
+
+#enroll-print {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8vw;
+}
+
+#enroll-print .enroll-print-form h3 {
+  margin-left: 400px;
+  font-size: 20px;
+  margin-bottom: 60px;
+}
+
+#enroll-print .enroll-print-form h4 {
+  font-size: 16px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+#enroll-print .enroll-print-form .btn {
+  margin-top: 50px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  margin-left: 500px;
+}
+
+#enroll-print .btn a.yellow {
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding-top: 10px;
+  padding: 13px 35px;
+  background-color: azure;
+  font-weight: 600;
+  border-radius: 5px;
+  color: rgb(21, 21, 100);
+  background: yellow;
+  transition: 0.3s ease;
+}
+
+#enroll-print .btn a.yellow:hover {
+  color: rgb(21, 21, 100);
+  background: azure;
+}
+
+/* ----------------------------------------------------- */
+
+/* contact us part` */
+
+#contact {
+  padding: 8vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#contact .getin {
+  width: 350px;
+}
+
+#contact .getin h2 {
+  color: #2c234d;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 0.8;
+  margin-bottom: 16px;
+}
+
+#contact .getin p {
+  color: #686875;
+  line-height: 24px;
+  margin-bottom: 33px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e5e4ed;
+}
+
+#contact .getin h3 {
+  color: #2c234d;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  margin-bottom: 15px;
+}
+
+#contact .getin .getin-details div {
+  display: flex;
+}
+
+#contact .getin .getin-details div .get {
+  font-size: 16px;
+  line-height: 22px;
+  color: #5838fc;
+  margin-right: 20px;
+}
+
+#contact .getin .getin-details div p {
+  font-size: 20px;
+  border-bottom: none;
+  line-height: 22px;
+  margin-bottom: 15px;
+}
+
+/* #contact .getin .getin-details .pro-links {
+  justify-items: flex-start;
+  margin-right: 0px;
+} */
+
+#contact .getin .getin-details .pro-links i {
+  justify-items: flex-start;
+  margin-right: 8px;
+}
+
+#contact .form {
+  width: 60%;
+  background: rgb(201, 201, 214);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+#contact .form h4 {
+  font-size: 24px;
+  color: #2c234d;
+  line-height: 30px;
+  margin-bottom: 8px;
+}
+
+#contact .form p {
+  color: #686875;
+  line-height: 24px;
+  padding-bottom: 25px;
+}
+
+#contact .form .form-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#contact .form .form-row input {
+  width: 48%;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 3px;
+  border: none;
+  background: #fff;
+  color: #757373;
+  outline: none;
+  padding: 20px 20px;
+  margin-bottom: 20px;
+}
+
+#contact .form .form-col input,
+textarea {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 3px;
+  border: none;
+  background: #fff;
+  color: #757373;
+  outline: none;
+  padding: 20px 20px;
+  margin-bottom: 20px;
+}
+
+#contact .form button {
+  font-size: 0.9rme;
+  padding: 13px 25px;
+  background: rgb(55, 36, 105);
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  color: #e5e4ed;
+}
+
+#map {
+  width: 100%;
+  height: 70vh;
+  margin-bottom: 8vw;
+}
+#map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+#forget-pass {
+  padding: 6vw 8vw 6vw 8vw;
+  background-image: linear-gradient(
+      rgb(99, 112, 168, 0.5),
+      rgba(81, 91, 233, 0.5)
+    ),
+    url("images/signup.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* form section */
+#forget-pass .form {
+  margin: 200px 200px;
+
+  width: 60%;
+  justify-items: center;
+  padding-top: 20px;
+  background: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 40px 30px 40px;
+  box-shadow: 0px 8px 32px 0, rgba(31, 38, 135, 0.37);
+}
+
+/* now styling form input section */
+#forget-pass .form input {
+  margin: 10px 0;
+  padding: 15px 10px;
+  border: 1px solid rgb(150, 134, 192);
+  outline: none;
+}
+
+#forget-pass .form input::placeholder {
+  color: #413c3c;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+#forget-pass .form .btn {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#forget-pass .form a.yellow {
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding-top: 10px;
+  padding: 13px 35px;
+  background-color: azure;
+  font-weight: 600;
+  border-radius: 5px;
+  color: rgb(21, 21, 100);
+  background: yellow;
+  transition: 0.3s ease;
+}
+
+#forget-pass .form a.yellow:hover {
+  color: rgb(21, 21, 100);
+  background: azure;
+}
+
+/* Tablet Mode---------------------------------------------------------------------- */
+
+@media (max-width: 769px) {
+  #course .courses img {
+    width: 100%;
+    height: 60%;
+    /* margin: 10px; */
+    background-size: cover;
+    background-position: centre;
+  }
+
+  #menu-btn {
+    /* this we doing that when we open tab mode then menu button get visisble that we have hide in desktop mode */
+    display: initial;
+  }
+
+  #menu-close {
+    display: initial;
+    font-size: 1.6rem;
+    padding: 30px 0 20px 20px;
+    color: aliceblue;
+  }
+
+  nav .navigationBar ul {
+    /* now we changing this ..so that our  home course about etc show in one column */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -220px; /*initally we make remian close menu when we click menu icon then only open */
+    width: 220px;
+    height: 100vh;
+    background: rgba(52, 54, 94, 0.45);
+    backdrop-filter: blur(4.5px);
+    border: 1px solid grey;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: 0.3s ease;
+  }
+  /* 
+  this for when we click menu button it goes open in side bar */
+  nav .navigationBar ul.active {
+    right: 0;
+  }
+
+  nav .navigationBar ul li {
+    padding: 20px 0 20px 40px;
+    margin-left: 0;
+  }
+
+  nav .navigationBar ul li a {
+    color: white;
+  }
+
+  .fa-book:before {
+    content: "\f02d";
+    color: white;
+    padding-right: 0%;
+  }
+
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 1px 2px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+
+  nav .navigationBar .dropdown:hover .dropbtn {
+    background-color: white;
+  }
+
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(152, 202, 25, 0.2);
+    z-index: 1;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+  }
+
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: white;
+  }
+
+  /* about */
+
+  #about-container .about-image img {
+    width: 300px;
+    height: 300px;
+  }
+
+  #about-container .about-text h2 {
+    margin-right: -180px;
+  }
+
+  #about-container .about-text p {
+    margin-right: -180px;
+  }
+
+  /* blog side padding reduce */
+
+  #blog-container {
+    padding: 8vw 4vw;
+  }
+
+  /* blog post part */
+  #blog-container .blogs_post {
+    width: 90%;
+  }
+
+  /* inner course */
+  #course-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 8vw 4vw;
+  }
+
+  #course-inner .overview {
+    width: 100%;
+  }
+
+  #course-inner .overview .course-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  #course-inner .enroll {
+    margin-top: 20px;
+  }
+}
+
+/* for mobile phone iphone */
+@media (max-width: 475px) {
+  #registration {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #home h2 {
+    justify-content: center;
+  }
+
+  /* setting paragraph like para in mid,height etc  */
+  #home p {
+    justify-content: center;
+  }
+#features .fea-box {
+   
+    margin-right: -11px;
+}
+  
+  
+}
+
+@media (max-width: 376px) {
+  /* about second sectio n */
+  #about-container {
+    flex-direction: column-reverse;
+  }
+
+  #about-container .about-image {
+    width: 100%;
+    padding: 0%;
+  }
+
+  #about-container {
+    display: flex;
+    align-items: initial;
+    justify-content: flex-start;
+  }
+
+  #about-container .about-text {
+    width: 0%;
+    justify-content: flex-start;
+  }
+#features .fea-box {
+    margin-right: -11px;
+}
+  #trust .trust-img {
+    flex-direction: column;
+    padding-bottom: 5px;
+  }
+
+  #trust .trust-img img {
+    padding-bottom: 30px;
+    width: 200px;
+    height: auto;
+  }
+
+  /* blog */
+  #blog-container {
+    flex-direction: column;
+  }
+
+  #blog-container .blogs {
+    width: 100%;
+  }
+
+  #blog-container .cate {
+    width: 100%;
+  }
+
+  footer input {
+    margin-bottom: 20px;
+  }
+
+  /* INNER COURSE */
+  #about-home h2 {
+    padding: 2vw;
+  }
+
+  /* contact */
+  #contact {
+    padding: 8vw 4vw;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-start;
+  }
+
+  #contact .form {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  #contact .getin {
+    width: 100%;
+  }
+}
